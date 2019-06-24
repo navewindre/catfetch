@@ -134,6 +134,8 @@ get_de
 echo -e "\e[8;12;56t"
 clear
 
+case "$1" in
+'-cat')
 echo "                       ________________________________
                       /
 $P_BLUE   /\\ ___ /\\     $P_RESET    / O: $P_BLUE$OS_NAME $P_RESET
@@ -143,5 +145,21 @@ $P_BLUE   /       \\      $P_RESET   \\ U: $P_BLUE$UPTIME $P_RESET
 $P_BLUE  /         \    ^ $P_RESET   \\________________________________
 $P_BLUE  |         |   // $P_RESET
 $P_BLUE   \       /  //   $P_RESET
-$P_BLUE    /// /// --"    $P_RESET
+$P_BLUE    /// /// --     $P_RESET"
+;;
 
+'-dog')
+echo "               ______________________________________
+              /
+$P_BLUE   /^ ^\\   $P_RESET  / O: $P_BLUE$OS_NAME $P_RESET
+$P_BLUE  / 0 0 \\  $P_RESET /  K: $P_BLUE$KERNEL_VER $P_RESET
+$P_BLUE  V\\ Y /V  $P_RESET \\  D: $P_BLUE$de $P_RESET
+$P_BLUE   / - \\   $P_RESET  \\ U: $P_BLUE$UPTIME $P_RESET
+$P_BLUE  /    |    $P_RESET  \\______________________________________
+$P_BLUE V__) ||    $P_RESET
+"
+;;
+*)
+echo "usage: catfetch [-dog/-cat]"
+;;
+esac
