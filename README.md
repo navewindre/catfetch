@@ -1,4 +1,4 @@
 # catfetch
-prints os info with a cute ascii cat
+prints os info with a cute ascii cat/dog
 
-![cat](https://i.imgur.com/dTUFeCb.png)
+![fetch](https://i.imgur.com/YR26HqP.png)
